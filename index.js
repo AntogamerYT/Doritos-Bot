@@ -32,10 +32,7 @@ client.command('doritos', async ctx => {
         }); // Reply with the cool doritos img
     } catch(e) {
         console.log(e) 
-        const status = await axios.get(url);
-        if (status.status === 429) {
-            ctx.reply('Ratelimited, try again in 1 second.') // This obviously doesn't work since axios will just return an error
-        } else ctx.reply('Sorry, no doritos for you, my code broke because of my dumbass owner.')
+        ctx.reply('Sorry, no doritos for you, my code broke because of my dumbass owner.')
     }
 })
 
